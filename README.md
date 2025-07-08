@@ -1,3 +1,6 @@
+# TODO:
+- [ ] Add License
+
 # Structure
 - Section:
   - Largest subdivisions of the notebook. 
