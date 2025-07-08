@@ -1,3 +1,8 @@
 [default.extend-words]
-# Don't correct the file extension "typ"
+# Don't correct the typst's file extension
 typ = "typ"
+
+[files]
+extend-exclude = [
+  "*.ttf"
+]
