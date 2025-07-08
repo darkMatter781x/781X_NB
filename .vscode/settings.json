@@ -1,7 +1,5 @@
 {
-  "tinymist.fontPaths": [
-    "${workspaceFolder}/assets/fonts/calibri",
-    "${workspaceFolder}/assets/fonts/monaspace",
-    "${workspaceFolder}/assets/fonts/font awesome",
+  "tinymist.typstExtraArgs": [
+    "--font-path=./assets/fonts"
   ]
 }
