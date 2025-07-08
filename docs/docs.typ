@@ -135,7 +135,8 @@ Lists can be created by starting a line with a dash (`-`) followed by a space.
     - Git
     - Excalidraw
     - Formatter
-    - Github?
+    - Github workflows
+    - Github PRs?
   - Formatting
     - Figures
       - Linking to figures
@@ -147,11 +148,13 @@ Lists can be created by starting a line with a dash (`-`) followed by a space.
 - Implement and document:
   - Integrations:
     - Include code from git?
+    - Docs compile checks (idk about docs for this)
   - Custom Formatting
     - Pro con charts
     - Admonitions (gentle-clues?)
     - Glossary
     - Appendix (new nb rules)
+    - Improve styling (idk about docs for this)
     - QR codes?
     - Decision matrices?
     - Visualization Charts?
