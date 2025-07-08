@@ -1,0 +1,6 @@
+# Build artifacts
+*.pdf
+
+# Todo: remove
+# Ignore silly old nb
+OverUnderNotebook

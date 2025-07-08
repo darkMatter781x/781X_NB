@@ -1,0 +1,41 @@
+# Structure
+- Section:
+  - Largest subdivisions of the notebook. 
+  - Each section will have its own page numbers. 
+  - Must be one of the following:
+    - Frontmatter 
+      - Contains table of contents and the front cover.
+      - Numbered with roman numerals (I).
+    - Body 
+      - Contains the notebook entries. 
+      - Numbered with normal arabic numerals (1). 
+    - Appendix 
+      - Contains the index/glossary and bibliography.
+      - Numbered with a prefix and arabic numerals: (A1).
+- Fragment: 
+  - Cannot be placed on the same page as another fragment.
+  - All content must be part of a fragment.
+  - A fragment cannot be broken up across sections.
+  - Includes:
+    - Table of contents
+    - Front cover
+    - Bibliography
+    - Index/glossary
+- fragment: 
+  - Must be placed in the body section.
+  - Each fragment has:
+    - Title
+    - Date
+    - 1 design process step
+    - 1 project
+    - Content
+  - Entries with the same date will belong to the same fragment (Entries can only share a page with other entries with the same date).
+# Terms
+- Project 
+  - Something to which the design process is being applied
+  - Used to distinguish between concurrent design processes
+  - Includes:
+    - Subsystems like intake, mogo clamp, etc.
+    - Processes perhaps
+    - Strategy perhaps
+    - Program parts like MCL, intake code, opcontrol, etc. 
