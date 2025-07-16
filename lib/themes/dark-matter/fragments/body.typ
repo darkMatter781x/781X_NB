@@ -1,56 +1,4 @@
-/// Holds the standalone mode of the body entry.
-/// The standalone mode defaults to being enabled.
-///
-/// See `body-entry.create()` for more information on how to use this mode.
-///
-/// dictionary with the following keys:
-/// - `disable`: function - Disables the standalone mode.
-/// - `get`: function - Returns whether the current standalone mode.
-#let standalone-mode = {
-  let state = state("body-entry-standalone-mode-state", true)
-  (
-    disable: () => state.update(false),
-    get: () => state.final(),
-  )
-}
-
 /// Creates a new body entry in the notebook.
-///
-/// = In standalone mode:
-/// This function can only be called once.
-/// The function will automatically initialize the theme and return the abridged notebook's content.
-/// This is useful for previewing a single body entry without rendering the entire notebook, enabling faster compile times.
-///
-/// To facilitate this UX, each body-entry.create() should be placed in its own file.
-/// Then, a central file should disable standalone mode and include all the body entry files.
-///
-/// Here is an example of this set up:
-/// #example(```typ
-///   // /entries/my-entry.typ
-///   #import "/lib/themes/dark-matter/fragments/body.typ": body-entry
-///   #body-entry.create(
-///     title: "My Entry",
-///     project: "my project",
-///     step: "identify problem",
-///     author: "ME",
-///     date: datetime(year: 1, month: 1, day: 1),
-///     witness: "NOT ME",
-///     order: 0,
-///   )[This is the content of my entry.]
-///
-///   // /my-main.typ
-///   #import "/lib/themes/dark-matter/theme.typ" as theme
-///   #theme.initialize()
-///   #(theme.body-entry.standalone-mode.disable)()
-///   #let entries = ("/entries/my-entry.typ",)
-///   #for entry in entries {
-///     include entry
-///   }
-/// ```)
-///
-/// = In non-standalone mode:
-/// This function can be called as many times as desired.
-/// The function will append the body entry to a global state that is used to display all body entries later.
 ///
 /// // Parameters
 /// - title (str): The title of the entry.
@@ -437,17 +385,4 @@
         ),
       )
   ))
-  context {
-    let standalone-mode = (standalone-mode.get)()
-
-    if standalone-mode {
-      assert(
-        entry-state.final().len() <= 1,
-        message: "You cannot create multiple body entries in standalone mode. If you did not intend to use standalone mode, then please call `(theme.body-entry.standalone-mode.disable)()` before calling body-entry.create().",
-      )
-
-      import "/lib/themes/dark-matter/initialize.typ": initialize
-      initialize(only-body: true)
-    }
-  }
 }

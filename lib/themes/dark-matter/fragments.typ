@@ -2,49 +2,48 @@
   import "/lib/fragments.typ": create-fragment
   import "./metadata.typ": sections
 
-  assert.eq(type(fragment-metadata), dictionary)
-  assert("section" in fragment-metadata)
-  assert.eq(type(fragment-metadata.section), str)
-  assert(fragment-metadata.section in sections)
-  assert("title" in fragment-metadata)
-  assert(type(fragment-metadata.title) == str or type(fragment-metadata.title) == content)
-  assert("sort-key" in fragment-metadata)
-  assert.ne(type(fragment-metadata.sort-key), none)
-  if ("outlined" not in fragment-metadata) {
-    fragment-metadata.outlined = true
-  }
-  assert.eq(type(fragment-metadata.outlined), bool)
-
-  assert(type(page-opts) == dictionary or type(page-opts) == type(none))
-
-  if type(page-opts) != type(none) {
-    assert("header" in page-opts)
-    assert.eq(type(page-opts.header), dictionary)
-    assert("color" in page-opts.header)
-    assert.eq(type(page-opts.header.color), color)
-
-    // Indicates whether the header content should be wrapped with the default box.
-    if "raw" not in page-opts.header {
-      page-opts.header.raw = false
+  // Validate parameters
+  {
+    assert.eq(type(fragment-metadata), dictionary)
+    assert("section" in fragment-metadata)
+    assert.eq(type(fragment-metadata.section), str)
+    assert(fragment-metadata.section in sections)
+    assert("title" in fragment-metadata)
+    assert(type(fragment-metadata.title) == str or type(fragment-metadata.title) == content)
+    assert("sort-key" in fragment-metadata)
+    assert.ne(type(fragment-metadata.sort-key), none)
+    if ("outlined" not in fragment-metadata) {
+      fragment-metadata.outlined = true
     }
-    assert.eq(type(page-opts.header.raw), bool)
-    assert("content" in page-opts.header)
-    assert.eq(type(page-opts.header.content), content)
-    assert("footer" in page-opts)
-    assert.eq(type(page-opts.footer), content)
-    if "args" not in page-opts {
-      page-opts.args = (:)
+    assert.eq(type(fragment-metadata.outlined), bool)
+
+    assert(type(page-opts) == dictionary or type(page-opts) == type(none))
+
+    if type(page-opts) != type(none) {
+      assert("header" in page-opts)
+      assert.eq(type(page-opts.header), dictionary)
+      assert("color" in page-opts.header)
+      assert.eq(type(page-opts.header.color), color)
+
+      // Indicates whether the header content should be wrapped with the default box.
+      if "raw" not in page-opts.header {
+        page-opts.header.raw = false
+      }
+      assert.eq(type(page-opts.header.raw), bool)
+      assert("content" in page-opts.header)
+      assert.eq(type(page-opts.header.content), content)
+      assert("footer" in page-opts)
+      assert.eq(type(page-opts.footer), content)
+      if "args" not in page-opts {
+        page-opts.args = (:)
+      }
+      assert.eq(type(page-opts.args), dictionary)
     }
-    assert.eq(type(page-opts.args), dictionary)
+
+    assert.eq(type(body), content)
   }
-
-  assert.eq(type(body), content)
-
-  // /// Counts how many fragment
-  // let fragment-counter = counter("notebook-" + fragment-metadata.section + "-fragment")
 
   let metadata-tag = [#metadata(fragment-metadata) <notebook-fragment>]
-  
 
   // Add the fragment to the body section
   create-fragment((
@@ -75,4 +74,9 @@
       )
     },
   ))
+
+  // If a file is being previewed, and the entire notebook is not being displayed,
+  // then we should display the file contents.
+  import "/lib/themes/dark-matter/display.typ": _internal-display-notebook
+  _internal-display-notebook(weak: true)
 }
