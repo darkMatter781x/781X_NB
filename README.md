@@ -39,7 +39,7 @@ To get started:
 		- Body 
 			- Contains the notebook entries. 
 			- Numbered with normal arabic numerals (1). 
-		- Appendix 
+		- Backmatter 
 			- Contains the index/glossary and bibliography.
 			- Numbered with a prefix and arabic numerals: (A1).
 - Fragment: 

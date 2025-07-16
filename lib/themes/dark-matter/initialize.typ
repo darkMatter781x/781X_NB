@@ -1,6 +1,6 @@
 /// Creates default fragments and returns the content of the entire notebook.
 ///
-/// These default fragments include the table of contents and the appendix.
+/// These default fragments include the table of contents and the backmatter.
 ///
 /// = Parameters:
 /// - `only-body`: bool - If true, only the body of the notebook is displayed without the table of contents.

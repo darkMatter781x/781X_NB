@@ -1,1 +1,1 @@
-#let sections = ("frontmatter", "body", "appendix")
+#let sections = ("frontmatter", "body", "backmatter")

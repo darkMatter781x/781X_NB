@@ -11,8 +11,8 @@
   let display-frontmatter((section, fragments)) = {
     // TODO: Implement
   }
-  /// Returns a TOC section for the appendix
-  let display-appendix((section, fragments)) = {
+  /// Returns a TOC section for the backmatter
+  let display-backmatter((section, fragments)) = {
     // TODO: Implement
   }
 
@@ -123,9 +123,9 @@
           ] else if section == "body" [
             = Entries
             #display-body-entries(param)
-          ] else if section == "appendix" [
-            = Appendix
-            #display-appendix(param)
+          ] else if section == "backmatter" [
+            = Backmatter
+            #display-backmatter(param)
           ]
         }
       }
