@@ -18,7 +18,7 @@ Here, try adding some text below in this blank space to see how it works:
 
 Alright, hopefully you added some text there.
 
-= A Bit of Formatting Syntax:
+= A Bit of Formatting Syntax
 In this section, we will learn the basics of formatting syntax.
 
 == Headers
@@ -125,6 +125,11 @@ Lists can be created by starting a line with a dash (`-`) followed by a space.
     # This is a code block inside a list item.
     print("Hello, World!")
     ```
+
+= Your First Entry
+Now that you know some basics of typst syntax, its time to learn how to create an entry in this notebook!
+
+== 
 
 = TODO:
 - Document

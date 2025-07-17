@@ -22,5 +22,26 @@
   // Set code font and enable ligatures
   show raw: set text(font: "Monaspace Neon", ligatures: true)
 
+  // Set page style to be similar to the notebook
+  set page(
+    "us-letter",
+    margin: (top: 1.75in, bottom: 1in, left: .5in, right: .5in),
+    header: strong[
+      #set align(center + horizon)
+      #set text(size: 30pt, fill: white, weight: "bold")
+
+      #box(
+        fill: gray,
+        width: 100%,
+        height: 1in,
+        radius: 10pt,
+        inset: .15in,
+      )[ Notebook Tutorial ] // TODO: Improve title
+    ],
+    numbering: "1",
+  )
+
+  outline()
+
   body
 }
