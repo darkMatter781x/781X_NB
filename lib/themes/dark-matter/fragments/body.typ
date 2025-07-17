@@ -338,6 +338,7 @@
         let raw-entries = entry-state.final()
         raw-entries
           .map(e => e.date)
+          .sorted()
           .dedup()
           .map(date => {
             let entries = raw-entries.filter(e => e.date == date).sorted(key: e => e.order)
