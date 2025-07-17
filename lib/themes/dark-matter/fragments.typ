@@ -52,22 +52,27 @@
       metadata-tag + body
     } else {
       page(
-        header: if (page-opts.header.raw) {
-          page-opts.header.content
-        } else {
-          counter(footnote).update(0)
-          pad(top: .5in)[
-            #box(
-              fill: page-opts.header.color,
-              width: 100%,
-              height: 1in,
-              radius: 10pt,
-              inset: .15in,
-              page-opts.header.content,
-            )
-            #v(1fr)
-          ]
-        },
+        header: [
+          #set align(center + horizon)
+          #set text(size: 30pt, fill: white, weight: "bold")
+
+          #if (page-opts.header.raw) {
+            page-opts.header.content
+          } else {
+            counter(footnote).update(0)
+            pad(top: .5in)[
+              #box(
+                fill: page-opts.header.color,
+                width: 100%,
+                height: 1in,
+                radius: 10pt,
+                inset: .15in,
+                page-opts.header.content,
+              )
+              #v(1fr)
+            ]
+          }
+        ],
         footer: page-opts.footer,
         metadata-tag + body,
         ..page-opts.args,

@@ -43,6 +43,7 @@
     show raw.where().and(label("code")): set text(size: 9pt)
     // Set code font and enable ligatures
     show raw: set text(font: "Monaspace Neon", ligatures: true)
+    show link: it => emph(underline(it))
     // Use square brackets for matrices and vectors
     set math.mat(delim: "[")
     set math.vec(delim: "[")

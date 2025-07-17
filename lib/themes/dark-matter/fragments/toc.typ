@@ -12,9 +12,21 @@
     // TODO: Implement
   }
   /// Returns a TOC section for the backmatter
-  let display-backmatter((section, fragments)) = {
+  let display-backmatter((section, fragments)) = [
     // TODO: Implement
-  }
+    #let appendices = fragments.filter(e => e.value.type == "appendix")
+
+    #if appendices.len() > 0 [
+      == Appendices
+      #grid(
+        columns: 1fr,
+        ..appendices.map(metadata => {
+          let loc = metadata.location()
+          link(metadata.location(), metadata.value.title)
+        })
+      )
+    ]
+  ]
 
   /// Returns a table of contents for the body entries
   /// The table will have the following columns:
@@ -46,6 +58,33 @@
       #box(width: 1fr, line(length: 100%, stroke: (dash: ("dot", 4pt))))
       #page-number
     ]
+    #show link: it => {
+      set underline(stroke: 0pt)
+      // Disable italics
+      emph(it)
+    }
+
+    #let prev-date = (date: none, page-loc: none)
+
+    #let children = for entry in entries {
+      let metadata = entry.value
+      if prev-date.date != metadata.date {
+        prev-date.date = metadata.date
+        prev-date.page-loc = entry.location()
+      }
+      let linkify(body) = link(entry.location(), body)
+      let linkify-date(date) = link(prev-date.page-loc, date)
+      (
+        /* Date: */ linkify-date(metadata.date.display(date-format)),
+        /* Project: */ linkify(metadata.project),
+        // TODO: Render colored icon for the design process step
+        /* Step: */ linkify(capitalize(metadata.step)),
+        linkify(entry-plus-page(
+          /* Entry Title: */ metadata.title,
+          /* Page #: */ numbering(section-numbering.at(section), ..counter(page).at(entry.location())),
+        )),
+      )
+    }
 
     // `table-with-merged-rows` is used to merge consecutive dates that are the same.
     #table-with-merged-rows(
@@ -63,19 +102,7 @@
       // TODO: Investigate adding `table.hline`s to divide dates
 
       // Add the entries
-      ..for entry in entries {
-        let metadata = entry.value
-        (
-          /* Date: */ metadata.date.display(date-format),
-          /* Project: */ metadata.project,
-          // TODO: Render colored icon for the design process step
-          /* Step: */ capitalize(metadata.step),
-          entry-plus-page(
-            /* Entry Title: */ metadata.title,
-            /* Page #: */ numbering(section-numbering.at(section), ..counter(page).at(entry.location())),
-          ),
-        )
-      },
+      ..children,
     )
   ]
 
@@ -94,9 +121,7 @@
       // TODO: Make this match the other headers used in the notebook, specifically the body entries
       header: (
         color: gray,
-        content: align(center + horizon, text(size: 30pt, fill: white, weight: "bold")[
-          Table of Contents
-        ]),
+        content: [ Table of Contents ],
       ),
       // Appears at the bottom of each TOC page
       // TODO: Make this match the other footers used in the notebook, specifically the body entries.
