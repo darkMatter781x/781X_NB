@@ -1,5 +1,8 @@
 {
   "tinymist.typstExtraArgs": [
     "--font-path=./assets/fonts"
+  ],
+  "conventionalCommits.scopes": [
+    "website"
   ]
 }
