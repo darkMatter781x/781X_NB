@@ -13,7 +13,7 @@ This can be done by pressing `F1`, typing `File: Revert File`, and hitting enter
 
 Here, try adding some text below in this blank space to see how it works:
 
-
+im just chill like that
 
 
 Alright, hopefully you added some text there.
