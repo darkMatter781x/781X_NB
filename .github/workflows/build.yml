@@ -1,6 +1,12 @@
 name: Build Notebook and Deploy to GitHub Pages
 on: [push, workflow_dispatch]
 
+# TODO: Prevent multiple builds at the same time
+# TODO: Make sure only main branch can be deployed to GitHub Pages
+
+# TODO: Indicate build date-time on the website, and whether the latest build was successful or not. (a badge?)
+# TODO: Investigate having a history of builds or multiple branches on the website.
+
 permissions:
   contents: write
 
