@@ -13,6 +13,8 @@ This can be done by pressing `F1`, typing `File: Revert File`, and hitting enter
 
 Here, try adding some text below in this blank space to see how it works:
 
+
+
 Alright, hopefully you added some text there.
 
 = A Bit of Formatting Syntax
@@ -126,7 +128,7 @@ Lists can be created by starting a line with a dash (`-`) followed by a space.
 = Your First Entry
 Now that you know some basics of typst syntax, its time to learn how to create an entry in this notebook!
 
-== 
+==
 
 = TODO:
 - Document

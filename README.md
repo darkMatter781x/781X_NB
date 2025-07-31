@@ -23,10 +23,11 @@ To get started:
 	3. Then click the "Preview Opened file" button in the top right as show below (you may have to wait for the extensions load): 
 
 		![Preview opened file button](docs/assets/README.md/open-preview.png)
-5. See the [docs/docs.typ](./docs/docs.typ) for more information
+5. Open [docs/docs.typ](./docs/docs.typ) from within VSCode to continue learning.
 
 # TODO:
 - [ ] Add License
+- [ ] Table of Contents to README.md?
 
 # Structure
 - Section:
