@@ -49,7 +49,7 @@
     set math.vec(delim: "[")
 
     // Set page size and margins
-    set page("us-letter", margin: (top: 1.75in, bottom: 1in, left: .5in, right: .5in))
+    set page("us-letter", margin: (top: 1.75in, bottom: 1in, x: .625in))
 
     // Set header style
     show heading: it => {

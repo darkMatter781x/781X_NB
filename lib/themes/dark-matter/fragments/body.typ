@@ -28,19 +28,7 @@
   assert.eq(type(date), datetime)
   assert.eq(type(body), content)
 
-  // TODO: Use our icons. I don't really like the FontAwesome icons, but they are good placeholders.
-  // TODO: Place in another file to be also used by the TOC.
-  import "@preview/fontawesome:0.5.0": *
-  let design-process = (
-    // research: rgb("#3a6b8aff"),
-    "identify problem": (color: rgb("#45818eff"), symbol: fa-magnifying-glass()),
-    brainstorm: (color: rgb("#76a5afff"), symbol: fa-lightbulb()),
-    select: (color: rgb("#a2c4c9ff"), symbol: fa-crosshairs()),
-    build: (color: rgb("#f1c232ff"), symbol: fa-hammer()),
-    test: (color: rgb("#cc4125ff"), symbol: fa-flask()),
-    // tune: rgb("#dd7e6bff"),
-    // deliver: rgb("#8e7cc3ff")
-  )
+  import "/lib/themes/dark-matter/design-process.typ": design-process
 
   assert(
     step in design-process,
@@ -152,7 +140,7 @@
       }
 
       // Label start of entry and attach metadata to it.
-      #metadata(entry) #entry-label
+      #metadata((..entry, color: color)) #entry-label
       // Actual content of the entry.
       #grid(
         columns: 100%,
@@ -250,16 +238,19 @@
         /// Must be either `"left"` or `"right"`.
         ///
         /// -> str
-        let rounded-side = if side == left { "right" } else { "left" }
+        let rounded-side = side.inv()
+
+        /// Distance from the edge of the page to the tab content.
+        let margin = 1in / 8
 
         box(
           // Round the side opposite to the side parameter.
-          radius: ((rounded-side): 10pt),
+          radius: ((repr(rounded-side)): 10pt),
           // Big enough to contain the text.
-          width: 1em + box-inset.x * 2,
+          width: margin + 1em + box-inset.x * 2,
           height: height,
           // Space the content away from the edges.
-          inset: box-inset,
+          inset: ((repr(side)): box-inset.x + margin, ..box-inset),
           fill: step.color,
           // Align the content in the center (horizontally).
           align(

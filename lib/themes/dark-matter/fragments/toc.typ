@@ -78,7 +78,10 @@
         /* Date: */ linkify-date(metadata.date.display(date-format)),
         /* Project: */ linkify(metadata.project),
         // TODO: Render colored icon for the design process step
-        /* Step: */ linkify(capitalize(metadata.step)),
+        /* Step: */ table.cell(
+          linkify(capitalize(metadata.step)),
+          fill: metadata.color,
+        ),
         linkify(entry-plus-page(
           /* Entry Title: */ metadata.title,
           /* Page #: */ numbering(section-numbering.at(section), ..counter(page).at(entry.location())),
@@ -95,7 +98,7 @@
       // Disable stroke for the table
       stroke: 0pt,
       // Add header row that will be repeated on each page
-      table.header([Date], [Project], [Step], entry-plus-page("Entry Title", "Page #")),
+      table.header([Date], [Project], [Design Process], entry-plus-page("Entry Title", "Page #")),
       // Add horizontal line below the header
       table.hline(stroke: 1pt),
 

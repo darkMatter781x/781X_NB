@@ -47,9 +47,18 @@
     })
   }
   let make-cell((..cell, x: _, y, body)) = {
-    assert.eq(type([#body]), content)
+    assert.eq(type(body), content)
     assert.eq(type(cell.rowspan), int)
     assert.eq(type(y), int)
+
+    let (body, cell-args) = if body.func() == table.cell {
+      let real-body = body.body
+      let (..body-args, body: _) = body.fields()
+      (body.body, (..body-args, ..cell, rowspan: cell.rowspan))
+    } else {
+      (body, cell)
+    }
+
 
     // TODO: Investigate whether a label with the row number in the id would be better (rather than in the metadata value)
     // TODO: Investigate perf impacts
@@ -61,11 +70,12 @@
       .page()
 
     let repeat-per-page(body) = context (
-      (body,) * if cell.rowspan > 1 { get-page-of-y(y + cell.rowspan - 1) - get-page-of-y(y) + 1 } else { 1 }
+      (body,) * if cell-args.rowspan > 1 { get-page-of-y(y + cell-args.rowspan - 1) - get-page-of-y(y) + 1 } else { 1 }
     ).join(colbreak())
 
     assert.eq(type(repeat-per-page(body)), content)
-    table.cell(..cell, repeat-per-page(body))
+
+    table.cell(..cell-args, repeat-per-page(body))
   }
 
   let out-columns = (..columns, 0pt, ..if debug { (auto,) } else {})
