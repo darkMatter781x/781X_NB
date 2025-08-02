@@ -32,7 +32,7 @@
         ],
       )
 
-      Andrew is our programmer and has been well versed with the world of programming in real world scenarios. Andrew has taken last year to build some code elements like Monte Carlo Localization
+      Andrew is our programmer and has been well versed with the world of programming in real world scenarios. Andrew has taken last year to build some code elements like Monte Carlo Localization he is also pretty cool and skibidi lul ehehehe haw lmao
     ],
     // TODO: change image to real andrew
     figure(image("andrew.png"), caption: ["andrew"]),
