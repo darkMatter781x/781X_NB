@@ -3,7 +3,8 @@
     "--font-path=./assets/fonts"
   ],
   "conventionalCommits.scopes": [
-    "website"
+    "website",
+    "ci"
   ],
   "tinymist.systemFonts": false
 }

@@ -22,4 +22,4 @@ jobs:
         with:
           tool: typstyle
       - name: Format Check
-        run: typstyle --check --line-width 120
+        run: typstyle --check --line-width 120 .
