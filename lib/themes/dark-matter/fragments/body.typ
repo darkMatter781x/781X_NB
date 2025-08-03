@@ -119,8 +119,7 @@
         if prev-entry == none { "No previous entry!" } else {
           link(
             prev-entry.location(),
-            "Prev. Project Entry: Page "
-              + numbering(section-numbering.body, ..counter(page).at(prev-entry.location())),
+            "Prev. Project Entry: Page " + numbering(section-numbering.body, ..counter(page).at(prev-entry.location())),
           )
         }
       }
@@ -133,8 +132,7 @@
         if prev-entry == none { "No next entry!" } else {
           link(
             prev-entry.location(),
-            "Next Project Entry: Page "
-              + numbering(section-numbering.body, ..counter(page).at(prev-entry.location())),
+            "Next Project Entry: Page " + numbering(section-numbering.body, ..counter(page).at(prev-entry.location())),
           )
         }
       }
@@ -158,7 +156,7 @@
               dir: ttb,
               spacing: 0.5em,
               // Display the project and title of the entry.
-              align(center, text(size: 1.25em, [#capitalize(entry.project): #entry.title],weight: "semibold")),
+              align(center, text(size: 1.25em, [#capitalize(entry.project): #entry.title], weight: "semibold")),
               line(length: 100%, stroke: 2pt + black),
             ),
         ),
@@ -272,7 +270,7 @@
                 if should-show-text {
                   // Rotate the text so that it is vertical.
                   rotate(
-                    if side==right{-270deg} else {-90deg},
+                    if side == right { -270deg } else { -90deg },
                     reflow: true,
                     step-text,
                   )
