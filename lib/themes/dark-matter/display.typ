@@ -32,7 +32,7 @@
     codly(languages: codly-languages)
 
     // Set text font size and family
-    set text(size: 15pt, kerning: true, font: "Calibri")
+    set text(size: 14pt, kerning: true, font: "Calibri")
     // Set paragraph style
     set par(justify: true, linebreaks: "optimized")
     // Make figure captions italic
