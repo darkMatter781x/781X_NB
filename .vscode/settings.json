@@ -4,5 +4,6 @@
   ],
   "conventionalCommits.scopes": [
     "website"
-  ]
+  ],
+  "tinymist.systemFonts": false
 }

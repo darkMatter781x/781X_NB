@@ -24,8 +24,9 @@ jobs:
           typst-version: 0.13.1
 
       - name: Compile Notebook
+        # TODO: Unify the command below with the one in .vscode/settings.json (ie: get the arguments from there)
         run: |
-          typst compile main.typ --font-path=./assets/fonts/
+          typst compile main.typ --font-path=./assets/fonts/ --ignore-system-fonts
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
