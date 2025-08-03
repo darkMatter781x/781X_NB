@@ -7,6 +7,7 @@
   "identify problem",
   "Kairui Dai",
   datetime(year: 2025, month: 7, day: 9),
+  witness: "Ryan Bhimani",
 )[
   When selecting the appropriate #strong[motor cartridge] for the #strong[drivetrain] in this year's VEX Robotics competition, it is important to analyze both the #strong[game requirements] and the *robot's performance goals*. The drivetrain controls how fast and efficiently the robot can move around the field, so choosing the right motor cartridge directly affects overall strategy.
 
@@ -41,7 +42,7 @@
   "select",
   "Kairui Dai",
   datetime(year: 2025, month: 7, day: 9),
-  witness: "Ryan Bhimani"
+  witness: "Ryan Bhimani",
 )[
 
   #set text(size: 14pt)
