@@ -155,7 +155,7 @@
               dir: ttb,
               spacing: 0.5em,
               // Display the project and title of the entry.
-              align(center, text(size: 1.25em, [#capitalize(entry.project): #entry.title])),
+              align(center, text(size: 1.25em, [#capitalize(entry.project): #entry.title],weight: "semibold")),
               line(length: 100%, stroke: 2pt + black),
             ),
         ),
@@ -195,7 +195,7 @@
       /// Step of the design process.
       let step = design-process.at(entry-page.step)
       /// Text to be displayed for the step.
-      let step-text = strong(upper(entry-page.step))
+      let step-text = strong(lower(entry-page.step))
 
       /// How much the tabs should expand vertically past the entry in each direction.
       let y-expansion = between-entry-spacing.to-absolute() / 8
@@ -269,7 +269,7 @@
                 if should-show-text {
                   // Rotate the text so that it is vertical.
                   rotate(
-                    -90deg,
+                    if side==right{-270deg} else {-90deg},
                     reflow: true,
                     step-text,
                   )
