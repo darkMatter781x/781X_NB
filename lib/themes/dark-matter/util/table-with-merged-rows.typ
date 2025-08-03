@@ -62,9 +62,11 @@
 
     // TODO: Investigate whether a label with the row number in the id would be better (rather than in the metadata value)
     // TODO: Investigate perf impacts
-    let get-page-of-y(y) = query(selector(row-probe-label)
-      .after(query(selector(start-label).before(here())).last().location())
-      .before(query(selector(end-label).after(here())).first().location()))
+    let get-page-of-y(y) = query(
+      selector(row-probe-label)
+        .after(query(selector(start-label).before(here())).last().location())
+        .before(query(selector(end-label).after(here())).first().location()),
+    )
       .find(e => e.value == y)
       .location()
       .page()
@@ -151,9 +153,11 @@
           + (
             box(
               context str(
-                query(selector(row-probe-label)
-                  .after(query(selector(start-label).before(here())).last().location())
-                  .before(here()))
+                query(
+                  selector(row-probe-label)
+                    .after(query(selector(start-label).before(here())).last().location())
+                    .before(here()),
+                )
                   .last()
                   .value,
               ),
