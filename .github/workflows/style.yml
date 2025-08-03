@@ -12,3 +12,14 @@ jobs:
         uses: crate-ci/typos@master
         with: 
           config: ./typos.toml
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Install typstyle
+        uses: taiki-e/install-action@v2
+        with:
+          tool: typstyle
+      - name: Format Check
+        run: typstyle --check --line-width 120
