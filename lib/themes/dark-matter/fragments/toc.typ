@@ -40,8 +40,7 @@
   let display-body-entries((section,)) = [
     #assert.eq(type(section), str)
 
-    /// Capitalizes the first letter of each word in a string.
-    #let capitalize(str) = str.split(" ").map(word => upper(word.first()) + word.slice(1)).join(" ")
+    #import "/lib/themes/dark-matter/util/capitalize.typ": capitalize
 
     // TODO: Use a variable for the <notebook-body-entry> label so that no problems arise if the label is changed.
 
@@ -76,7 +75,7 @@
       let linkify-date(date) = link(prev-date.page-loc, date)
       (
         /* Date: */ linkify-date(metadata.date.display(date-format)),
-        /* Project: */ linkify(metadata.project),
+        /* Project: */ linkify(capitalize(metadata.project)),
         // TODO: Render colored icon for the design process step
         /* Step: */ table.cell(
           linkify(capitalize(metadata.step)),

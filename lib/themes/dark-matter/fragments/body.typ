@@ -30,6 +30,10 @@
 
   import "/lib/themes/dark-matter/design-process.typ": design-process
 
+  // Prevent problems regarding case sensitivity.
+  step = lower(step)
+  project = lower(project)
+
   assert(
     step in design-process,
     message: "Step must be one of the design process steps (" + design-process.keys().join(", ") + ")",
@@ -101,9 +105,7 @@
       /// Color of the entry's step.
       #let color = design-process.at(entry.step).color
 
-      // TODO: Move to a separate file to be shared with the TOC.
-      /// Capitalize start of words
-      #let capitalize(str) = str.split(" ").map(word => upper(word.slice(0, 1)) + word.slice(1)).join(" ")
+      #import "/lib/themes/dark-matter/util/capitalize.typ": capitalize
 
       /// Text to be displayed as the author.
       #let author-text = if type(entry.author) == array { entry.author.join(", ") } else { entry.author }
