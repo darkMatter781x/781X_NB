@@ -41,6 +41,7 @@
   "select",
   "Kairui Dai",
   datetime(year: 2025, month: 7, day: 8),
+  witness: "Ryan Bhimani"
 )[
 
   #set text(size: 14pt)
