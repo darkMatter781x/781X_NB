@@ -19,6 +19,9 @@
   == Volunteering
   As a team, we try our best to volunteer at least 2-3 times a season at local competitions. In the past, our team has filled roles involving refereeing, field resetting, queueing, and checking in teams. For example, the week before the high school States Competition during High Stakes, we helped out at the middle school States before meeting up and working on our autonomous code.
 
+  == Scrimmages
+  Last year, we also dedicated time to planning and organising scrimmages with other highly skilled Arizona VRC teams we competed with in the past. These were held before both States and Worlds, so we hope to do this again this year as we all improved our robots as a result of guidance from each other.
+
   == Open Source Software
 
   // TODO: write community contribution of code (lemlib, etc)
