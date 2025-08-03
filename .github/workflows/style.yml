@@ -1,4 +1,4 @@
-name: Spell Check
+name: Style Check
 on: [push, workflow_dispatch]
 
 jobs:
