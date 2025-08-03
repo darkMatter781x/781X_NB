@@ -52,23 +52,15 @@
     set page("us-letter", margin: (top: 1.75in, bottom: 1in, x: .625in))
 
     // Set header style
-    show heading: it => {
-      set block(below: 1em)
-
-      let content = if it.level == 1 {
-        set text(size: 15pt)
-        box(fill: gray, outset: 0.5em, radius: 1.5pt, it.body)
-      } else if it.level == 2 {
-        set text(size: 14pt)
-
-        it.body
-      } else {
-        set text(size: 11pt)
-        it.body
-      }
-
-      block(content)
-    }
+    show heading.where(level: 1): box.with(
+      outset: .4em,
+      radius: .4em,
+      fill: gray,
+    )
+    show heading.where(level: 1): set text(size: (1. + 3 * .1 / 3.) * 1em, weight: "bold")
+    show heading.where(level: 2): set text(size: (1. + 2 * .1 / 3.) * 1em, weight: "bold")
+    show heading.where(level: 3): set text(size: (1. + 1 * .1 / 3.) * 1em, weight: "bold")
+    show heading: block.with(below: .8em)
 
 
     // Get the types of sections

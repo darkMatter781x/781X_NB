@@ -139,6 +139,9 @@
         }
       }
 
+      // Reset heading counter
+      #counter(heading).update((0,))
+
       // Label start of entry and attach metadata to it.
       #metadata((..entry, color: color)) #entry-label
       // Actual content of the entry.
