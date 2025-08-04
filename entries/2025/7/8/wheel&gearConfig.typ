@@ -54,7 +54,8 @@ This year's strategy demands a drivetrain that is optimized for *speed, maneuver
   ]
 
   #table(columns: (0.75fr, 1fr), rows: 6, inset: 10pt,
-    [#figure(image("360 on 3.25.png"), caption: [360 rpm on 3.25 in Drive from Vex Robotics Drivebase Tutorial by 9MotorGang on Youtube])], [edef], [#figure(image("450_2.75_finished.png"), caption: [450 rpm on 2.75 by Owen 16610A on Discord])]
+    [#figure(image("360 on 3.25.png"), caption: [360 rpm on 3.25 in Drive from Vex Robotics Drivebase Tutorial by 9MotorGang on Youtube])], [edef], [#figure(image("450_2.75_finished.png"), caption: [450 rpm on 2.75 by Owen 16610A on Discord])], [ef],
+    
   ))
 
 ]
