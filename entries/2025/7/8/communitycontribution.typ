@@ -27,3 +27,31 @@
   // TODO: write community contribution of code (lemlib, etc)
 
 ]
+
+
+#body-entry.create(
+  "Overall Season Goals",
+  "Introduction",
+  "project management",
+  "Juliana Curtis",
+  datetime(year: 2025, month: 7, day: 8),
+  witness: "Andrew Curtis and Neil Joshi",
+)[
+
+Since this is our team's 4th year of existence, we always strive to improve our competitive performance; thus, we favor making goals at the start of each season.
+
+=== Local Competitions and Arizona States
+  - Place top 5 in qualifications
+  - Place top 3 in skills
+  - Win two awards
+  - Compete in finals  
+    
+    \* Qualify for Worlds at States
+
+=== Signature Competitions and VEX Worlds
+  - Place top 10 in qualifications
+  - Place in the top 10% of skills
+  - Win one award
+    - Earn a banner
+  - Compete in semifinals in our division
+]
