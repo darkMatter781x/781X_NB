@@ -2,11 +2,12 @@
 #show figure.caption: set text(size: 8pt)
 
 #body-entry.create(
-  "Requirements for Wheel & Gear Configuration",
+  "Requirements for Wheel and Gear Configuration",
   "drivetrain",
   "identify problem",
   "Kairui Dai",
   datetime(year: 2025, month: 7, day: 8),
+  witness: "Shreyas Bhatt",
 )[
 
 When designing a competitive drivetrain for this year's VEX Robotics competition, it's crucial to carefully select both the gear ratio and wheel configuration. These two factors significantly impact speed, torque, acceleration, stability, and the robot's ability to interact with game elements and the field.
@@ -40,6 +41,7 @@ This year's strategy demands a drivetrain that is optimized for *speed, maneuver
   "brainstorm",
   "Kairui Dai",
   datetime(year: 2025, month: 7, day: 8),
+  witness: "Shreyas Bhatt",
 )[
 
   There are many possible wheel and gear configurations possible, however only a few options are viable for a reasonable amount of speed and torque. The wheel and gear configurations that we are considering for this robot are of the following:
