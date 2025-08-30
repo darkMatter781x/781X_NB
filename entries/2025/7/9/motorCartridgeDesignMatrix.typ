@@ -48,34 +48,7 @@
   #set text(size: 14pt)
   The following criteria was considered in the design matrix:
 
-  == *Top Speed (Weight: 1)*
-  - *What it is:* The maximum speed the drivetrain can reach.
-
-  - *Why it matters:* In fast-paced games, top speed allows your robot to quickly move between key zones (e.g., goals, parking zones, scoring areas). A higher top speed reduces travel time and increases scoring cycles.
-
-  - *Used in:* Games with a large field, multiple scoring zones, or limited match time.
-
-  == *Acceleration (Weight: 1)*
-  - *What it is:* How quickly the drivetrain reaches its top speed.
-
-  - *Why it matters:* A robot with strong acceleration can respond faster to changes in gameplay, like dodging an opponent, contesting a goal, or switching directions. This is crucial for real-time strategic plays.
-
-  - *Used in:* Defense, racing to contested goals, or sudden tactical moves like endgame parking.
-
-  == *Torque Output (Weight: 0.6)*
-  - *What it is:* The amount of rotational force the motor provides.
-
-  - *Why it matters:* High torque is essential for pushing other robots, moving heavy game elements, or driving over resistance (like field barriers). If torque is too low, the robot may stall under pressure.
-
-  - *Used in:* Pushing, defense, lifting, or heavy robot frames.
-
-
-  == *Control & Precision (Weight: 0.8)*
-  - *What it is:* How easy it is to drive or program the robot for accurate, smooth movements.
-
-  - *Why it matters:* Robots need precise control when navigating tight spaces, turning accurately, or aligning with goals. Faster motors can be harder to control without tuning.
-
-  - *Used in:* Autonomous routines, alignment with goals, or narrow pathways on the field.
+// TODO: add explanation/reference to old design matrice weights (ie. refer to this page for weights)
 
   == *Field Coverage Speed (Weight: 1)*
   - *What it is:* How quickly the drivetrain can move across the game field during normal gameplay.
@@ -104,9 +77,8 @@
   - *Weight* reflects how important that criterion is for drivetrain performance in this year's game
 
   = Decision Reasoning
-  We weighted the categories of top speed, acceleration, control, and field coverage speed the highest because, based on our game analysis (see page [insert page number here]), we determined that a fast robot is essential for effectively controlling both the long goal and the center goal. Additionally, high speed is critical for making split-second decisions, such as parking, descoring, or preventing a descore by the opposing team.
-
-  In contrast, we assigned lower weights to torque output and control & precision, as they are less important in this year's game. As stated in our game analysis (see page [insert page number here]), all game elements are relatively lightweight, so the drivetrain does not require a high amount of torque to perform effectively. The need for precision is also reduced, since we can improve the robot's accuracy using hardware solutions like aligners, allowing us to deprioritize software-based precision control.
+  
+  // TODO: reference/link previous decision matrix weighting + field coverage explanation
 
   = Conclusion
   Despite its *lower torque and control*, the *600 RPM cartridge *ranks highest in this matrix due to:
