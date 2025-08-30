@@ -86,3 +86,40 @@ caption: [Long Goal Dimensions from V5RC Game Manual])
 
 
 ]
+
+#body-entry.create(
+  "Important Game Rules",
+  "Game Analysis",
+  "identify problem",
+  "Juliana Curtis",
+  datetime(year: 2025, month: 7, day: 8),
+  witness: "Kairui Dai",
+)[
+
+// TODO: Make sure game overview and game rules are on different pages althoigh on the same date
+
+- *`<SG2>`* and *`<SG3>`* - Horizontal and vertical expansion is limited
+  - Robots cannot exceed 22" at any point in any direction
+    - Robots must be able to fit inside a hypothetical *22"x22"x22"* box
+    - Since the field is crowded with goals, we'd like to be able to *go under the long goals* which limits our height
+    - Since the double park is more than triple the points of a normal park (1 robot), our width is limited to *fit the parking space*
+
+- *`<SG6>`* - Robots may interact with/hold an unlimited number of blocks
+  - Unlike previous years, the possession limit in Push Back is unlimited
+    - This means that *robots can stockpile blocks*, whether it be their own or the opposing alliance's
+      - Stockpiling your own could be useful for the worst case scenario or dispensing all of them at the end for a control bonus/points
+      - Stockpiling others' could useful to prevent them from scoring points
+
+- *`<SG11>`* - Park Zones are protected during the endgame
+  - During the last 20 seconds of a match, robots may not contact the other alliance's Park Zone or the robots parked in that Zone
+    - This is similar to the elevation protection in High Stakes which caused robots to only park during the endgame
+    - This could also provide *more time for complicated mechanisms/systems for double parking*
+
+- *`<R25>`* - A limited amount of custom plastic is allowed
+  - Unlike previous years, the plastic limit has changed to 12 individual pieces which cannot be larger than 4" x 8" each
+    - This means that *plastic use must be intentional* and can no longer be used on large scales for bracing
+    - This also means we cannot use it to solve small mounting problems
+  
+
+
+]
