@@ -17,7 +17,8 @@
   (datetime(year: 2025, month: 7, day: 8, hour: 10, minute: 30, second: 0), ([Meeting], red)),
   (datetime(year: 2025, month: 7, day: 9, hour: 10, minute: 30, second: 0), ([Meeting], red)),
   (datetime(year: 2025, month: 7, day: 20, hour: 10, minute: 30, second: 0), ([Meeting], red)),
-   (datetime(year: 2025, month: 7, day: 24, hour: 10, minute: 30, second: 0), ([Meeting], red)),
+   (datetime(year: 2025, month: 7, day: 27, hour: 10, minute: 30, second: 0), ([Meeting], red)),
+   (datetime(year: 2025, month: 7, day: 16, hour: 7, minute: 0, second: 0), ([First Day of School], green)),
 )
 
 #calendar-month(

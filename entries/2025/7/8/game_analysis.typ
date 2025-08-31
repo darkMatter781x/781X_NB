@@ -84,6 +84,49 @@
 #figure(image("longgoal_dimensions.png", width: 70%),
 caption: [Long Goal Dimensions from V5RC Game Manual])
 
+== Point Value Analysis
+In a VRC Push Back match, points may be scored in the following ways:
+
+- A block is placed in…
+  - A Long Goal
+  - A Center Goal
+- In the endgame, a robot parks in the Park Zone
+- The alliance wins the autonomous bonus
+
+=== Point Breakdown
+
+  #figure(table(
+    columns: (1.1fr, 0.8fr, 1.25fr, 1.5fr),
+    rows: 8,
+    inset: 10pt,
+    table.header([], [*Point Value*], [*Total Object Amount*], [*Maximum Points Possible*]), 
+
+    [Block Scored], [3], [44], [132],
+    
+    [Controlled Zone in a Long Goal], [10],
+    [2], [20],
+    
+    [Controlled Center Goal - Upper], [8], [1], [8],
+    
+    [Controlled Center Goal - Lower], [6], [1], [6],
+    
+    [2 Parked Robots], [30], [1], [30],
+    
+    [Autonomous Bonus], [10], [1], [30],
+    
+    [Highest Score Possible], [], [], [*206*],
+  ),
+  
+caption: [Point Breakdown of Each Scoring Method in Push Back. Highest possible score assumes all blocks are scored in the Goals])
+
+As seen in Table 1, scoring blocks goals hold the highest proportion of total
+score in a Push Back match.
+- If an alliance scores all 44 blocks, the maximum amount, in the goals, the 132 points is 64% of the 206 total possible score.
+  - Based on this, it should be a priority for a team to score Triballs in an alliance
+goal.
+
+
+
 
 ]
 
