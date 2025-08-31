@@ -63,70 +63,72 @@
       - This was found to be a problem during High Stakes while scoring on wall stakes and climbing the ladder
     - Inserting blocks into the goal
 
-#let image-width=2.86in
+  #let image-width = 2.86in
 
-#grid(
+  #grid(
     columns: (1fr, image-width),
     inset: 0.5em,
     [
-    - Intaking different orientations of blocks
-      - A block is an 18 sided object with a maximum diameter of 3.84” and a minimum of 3.23”, so the *sides have different face shapes*
-      - The medium size limits the ability to possess an excess of blocks
-    - The long goals have a minimum diameter of 3.61” which is smaller than the maximum diameter of the block, meaning when scored, they *have to be oriented very specifically*
-    - We also have to *raise the blocks up* to the height of the goal
+      - Intaking different orientations of blocks
+        - A block is an 18 sided object with a maximum diameter of 3.84” and a minimum of 3.23”, so the *sides have different face shapes*
+        - The medium size limits the ability to possess an excess of blocks
+      - The long goals have a minimum diameter of 3.61” which is smaller than the maximum diameter of the block, meaning when scored, they *have to be oriented very specifically*
+      - We also have to *raise the blocks up* to the height of the goal
 
     ],
     [
       #figure(image("block_dimensions.png"), caption: [Block dimensions from the V5RC Game Manual])
-    ]
-)
+    ],
+  )
 
-#figure(image("longgoal_dimensions.png", width: 70%),
-caption: [Long Goal Dimensions from V5RC Game Manual])
+  #figure(image("longgoal_dimensions.png", width: 70%), caption: [Long Goal Dimensions from V5RC Game Manual])
 
-== Point Value Analysis
-In a VRC Push Back match, points may be scored in the following ways:
+  == Point Value Analysis
+  In a VRC Push Back match, points may be scored in the following ways:
 
-- A block is placed in…
-  - A Long Goal
-  - A Center Goal
-- In the endgame, a robot parks in the Park Zone
-- The alliance wins the autonomous bonus
+  - A block is placed in…
+    - A Long Goal
+    - A Center Goal
+  - In the endgame, a robot parks in the Park Zone
+  - The alliance wins the autonomous bonus
 
-=== Point Breakdown
+  === Point Breakdown
 
-  #figure(table(
-    columns: (1.1fr, 0.8fr, 1.25fr, 1.5fr),
-    rows: 8,
-    inset: 10pt,
-    table.header([], [*Point Value*], [*Total Object Amount*], [*Maximum Points Possible*]), 
+  // TODO: Add color to the point breakdown table
 
-    [Block Scored], [3], [44], [132],
-    
-    [Controlled Zone in a Long Goal], [10],
-    [2], [20],
-    
-    [Controlled Center Goal - Upper], [8], [1], [8],
-    
-    [Controlled Center Goal - Lower], [6], [1], [6],
-    
-    [2 Parked Robots], [30], [1], [30],
-    
-    [Autonomous Bonus], [10], [1], [30],
-    
-    [Highest Score Possible], [], [], [*206*],
-  ),
-  
-caption: [Point Breakdown of Each Scoring Method in Push Back. Highest possible score assumes all blocks are scored in the Goals])
+  #figure(
+    table(
+      columns: (1.1fr, 0.8fr, 1.25fr, 1.5fr),
+      rows: 8,
+      inset: 10pt,
+      table.header([], [*Point Value*], [*Total Object Amount*], [*Maximum Points Possible*]),
 
-As seen in Table 1, scoring blocks goals hold the highest proportion of total
-score in a Push Back match.
-- If an alliance scores all 44 blocks, the maximum amount, in the goals, the 132 points is 64% of the 206 total possible score.
-  - Based on this, it should be a priority for a team to score Triballs in an alliance
-goal.
+      [Block Scored], [3], [44], [132],
 
+      [Controlled Zone in a Long Goal], [10], [2], [20],
 
+      [Controlled Center Goal - Upper], [8], [1], [8],
 
+      [Controlled Center Goal - Lower], [6], [1], [6],
+
+      [2 Parked Robots], [30], [1], [30],
+
+      [Autonomous Bonus], [10], [1], [30],
+
+      [Highest Score Possible], [], [], [*206*],
+    ),
+
+    caption: [Point Breakdown of Each Scoring Method in Push Back. Highest possible score assumes all blocks are scored in the Goals],
+  )
+
+  As seen in Table 1, scoring blocks goals hold the highest proportion of total
+  score in a Push Back match.
+  - If an alliance scores all 44 blocks, the maximum amount, in the goals, the 132 points is *64% of the 206 total possible score*.
+    - Based on this, it should be a *priority for a team to score blocks in the goals*
+  - If an alliance double parks the, 30 points is *15% of the total possible score*.
+    - This is also a more reliable source of points than scoring blocks, so it should be a *priority in the endgame*.
+
+  // TODO: Add a pie chart and tied match breakdown analysis
 
 ]
 
@@ -139,30 +141,30 @@ goal.
   witness: "Kairui Dai",
 )[
 
-// TODO: Make sure game overview and game rules are on different pages althoigh on the same date
+  // TODO: Make sure game overview and game rules are on different pages althoigh on the same date
 
-- *`<SG2>`* and *`<SG3>`* - Horizontal and vertical expansion is limited
-  - Robots cannot exceed 22" at any point in any direction
-    - Robots must be able to fit inside a hypothetical *22"x22"x22"* box
-    - Since the field is crowded with goals, we'd like to be able to *go under the long goals* which limits our height
-    - Since the double park is more than triple the points of a normal park (1 robot), our width is limited to *fit the parking space*
+  - *`<SG2>`* and *`<SG3>`* - Horizontal and vertical expansion is limited
+    - Robots cannot exceed 22" at any point in any direction
+      - Robots must be able to fit inside a hypothetical *22"x22"x22"* box
+      - Since the field is crowded with goals, we'd like to be able to *go under the long goals* which limits our height
+      - Since the double park is more than triple the points of a normal park (1 robot), our width is limited to *fit the parking space*
 
-- *`<SG6>`* - Robots may interact with/hold an unlimited number of blocks
-  - Unlike previous years, the possession limit in Push Back is unlimited
-    - This means that *robots can stockpile blocks*, whether it be their own or the opposing alliance's
-      - Stockpiling your own could be useful for the worst case scenario or dispensing all of them at the end for a control bonus/points
-      - Stockpiling others' could useful to prevent them from scoring points
+  - *`<SG6>`* - Robots may interact with/hold an unlimited number of blocks
+    - Unlike previous years, the possession limit in Push Back is unlimited
+      - This means that *robots can stockpile blocks*, whether it be their own or the opposing alliance's
+        - Stockpiling your own could be useful for the worst case scenario or dispensing all of them at the end for a control bonus/points
+        - Stockpiling others' could useful to prevent them from scoring points
 
-- *`<SG11>`* - Park Zones are protected during the endgame
-  - During the last 20 seconds of a match, robots may not contact the other alliance's Park Zone or the robots parked in that Zone
-    - This is similar to the elevation protection in High Stakes which caused robots to only park during the endgame
-    - This could also provide *more time for complicated mechanisms/systems for double parking*
+  - *`<SG11>`* - Park Zones are protected during the endgame
+    - During the last 20 seconds of a match, robots may not contact the other alliance's Park Zone or the robots parked in that Zone
+      - This is similar to the elevation protection in High Stakes which caused robots to only park during the endgame
+      - This could also provide *more time for complicated mechanisms/systems for double parking*
 
-- *`<R25>`* - A limited amount of custom plastic is allowed
-  - Unlike previous years, the plastic limit has changed to 12 individual pieces which cannot be larger than 4" x 8" each
-    - This means that *plastic use must be intentional* and can no longer be used on large scales for bracing
-    - This also means we cannot use it to solve small mounting problems
-  
+  - *`<R25>`* - A limited amount of custom plastic is allowed
+    - Unlike previous years, the plastic limit has changed to 12 individual pieces which cannot be larger than 4" x 8" each
+      - This means that *plastic use must be intentional* and can no longer be used on large scales for bracing
+      - This also means we cannot use it to solve small mounting problems
+
 
 
 ]
