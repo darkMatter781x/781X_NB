@@ -57,8 +57,6 @@
 
   - *Used in:* Games with high movement demands, like retrieving/distributing game pieces or switching field sides.
 
-  #colbreak()
-
   #table(
     columns: (auto, 1fr, 1fr, 1fr, 1fr),
     rows: 7,
